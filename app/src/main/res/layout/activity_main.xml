@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background"
+    android:padding="@dimen/activity_padding"
+    tools:context="avantari.com.materilaanimationtask.activity.MainActivity">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="@dimen/card_corner_radius">
+
+        <android.support.percent.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/chart_view_id"
+                android:layout_marginLeft="@dimen/title_view_margin_left"
+                android:layout_marginTop="@dimen/title_view_margin_top"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:id="@+id/current_msg_tv_id_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/current_page_msg"
+                    android:textColor="@android:color/tertiary_text_dark"
+                    android:visibility="invisible" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/current_msg_tv_id_"
+                    android:background="@android:color/white">
+
+                    <TextView
+                        android:id="@+id/current_value_tv_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:textColor="@android:color/black"
+                        android:textSize="44sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/current_value_tv_id"
+                        android:layout_marginBottom="@dimen/unit_view_margin_bttom"
+                        android:layout_marginLeft="@dimen/unit_view_margin_left"
+                        android:layout_toRightOf="@+id/current_value_tv_id"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/power_unit"
+                        android:textColor="@android:color/black"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/graph_btn_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/chart_floating_btn_margin"
+                android:background="@drawable/circular_bg"
+                android:clickable="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:src="@drawable/bar"
+                app:backgroundTint="@color/orange"
+                app:backgroundTintMode="src_atop"
+                app:elevation="6dp"
+                app:layout_marginTopPercent="60%"
+                app:pressedTranslationZ="12dp"
+                app:rippleColor="@color/orangedark" />
+
+            <RelativeLayout
+                android:id="@+id/chart_view_id"
+                android:layout_width="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@color/colorAccent"
+                app:layout_heightPercent="65%">
+
+                <RelativeLayout
+                    android:id="@+id/title_view_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/header_margin">
+
+                    <TextView
+                        android:id="@+id/title_tv_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/chart_heading"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title_tv_id"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/chart_heading_sub_margin_top"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/chart_heading_sub"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+                <me.itangqi.waveloadingview.WaveLoadingView
+                    android:id="@+id/waveLoadingView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/wave_view_margin_top"
+                    app:wlv_progressValue="40"
+                    app:wlv_round_rectangle="false"
+                    app:wlv_shapeType="rectangle"
+                    app:wlv_waveAmplitude="60"
+                    app:wlv_waveColor="@color/colorAccent_light" />
+
+            </RelativeLayout>
+
+        </android.support.percent.PercentRelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

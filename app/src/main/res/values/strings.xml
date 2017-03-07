@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MaterilaAnimationTask</string>
+    <string name="transition_reveal1">transition_reveal1</string>
+
+    <string name="current_page_msg">Total Electricity Consumption\nof Galaxy SOHO</string>
+    <string name="power_page_msg">The last 12 hours average\nElectricity Consumption</string>
+
+    <string name="power_unit">kWh</string>
+
+    <string name="chart_heading">The Current Chart</string>
+    <string name="chart_heading_sub">2014.12.25</string>
+</resources>

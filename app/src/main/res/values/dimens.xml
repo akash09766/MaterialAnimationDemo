@@ -1,0 +1,27 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+
+    <integer name="anim_duration_very_long">1500</integer>
+    <integer name="anim_duration_long">500</integer>
+    <integer name="anim_duration_medium">300</integer>
+    <integer name="anim_duration_medium_">200</integer>
+
+    <dimen name="activity_padding">20dp</dimen>
+    <dimen name="card_corner_radius">16dp</dimen>
+
+    <dimen name="title_view_margin_left">30dp</dimen>
+    <dimen name="title_view_margin_top">60dp</dimen>
+
+    <dimen name="unit_view_margin_left">5dp</dimen>
+    <dimen name="unit_view_margin_bttom">5dp</dimen>
+
+    <dimen name="chart_floating_btn_margin">25dp</dimen>
+
+    <dimen name="chart_heading_sub_margin_top">10dp</dimen>
+    <dimen name="wave_view_margin_top">80dp</dimen>
+
+    <dimen name="header_margin">16dp</dimen>
+</resources>
